@@ -23,3 +23,14 @@ summary(Turk$ta) # Summary from vector with quartiles
 summary(Turk) # Summary of data.frame
 
 boxplot(Turk$ta) # Graphical summary from vector
+
+## Create date vector
+1:100 # From 1 to 100
+seq(1, 100) # Same as above
+as.Date("1901-01-01") # Date generation
+Ido <- seq(as.Date("1901-01-01"), as.Date("2023-12-31")) # Same as above
+
+plot(Ido, Turk$ta, type = "l") # Plot temperature vector
+
+## Time-series wiht xts package
+install.packages("xts")
