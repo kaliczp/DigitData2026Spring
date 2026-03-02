@@ -33,4 +33,11 @@ Ido <- seq(as.Date("1901-01-01"), as.Date("2023-12-31")) # Same as above
 plot(Ido, Turk$ta, type = "l") # Plot temperature vector
 
 ## Time-series wiht xts package
-install.packages("xts")
+## install.packages("xts") # Only once
+## work wiht xts data
+library(xts)
+Turk.xts = xts(Turk$ta, Ido)
+plot(Turk.xts)
+plot(Turk.xts["2001"])
+plot(Turk.xts["2001-03"])
+plot(Turk.xts["2001/2010"])
