@@ -13,3 +13,13 @@ head(Turk) # Header of object
 tail(Turk) # End of object
 
 Turk # Print object with their name not good if the object long
+
+str(Turk$ta) # structure of ta column
+
+plot(Turk$ta) # Plot temperature vector
+plot(Turk$ta, type = "l") # Plot temperature vector
+
+summary(Turk$ta) # Summary from vector with quartiles
+summary(Turk) # Summary of data.frame
+
+boxplot(Turk$ta) # Graphical summary from vector
