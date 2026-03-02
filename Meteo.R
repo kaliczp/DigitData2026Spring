@@ -3,7 +3,9 @@ dir() # List of current directory
 help.start() # Help system
 read.table("ta_h_Turkeve_19012023.csv", sep = ";") # Impot csv
 ?read.table # Manual page
-Turk <- read.table("ta_h_Turkeve_19012023.csv", sep = ";", header = TRUE) # Save in an object
+Turk <- read.table(file = "ta_h_Turkeve_19012023.csv", sep = ";", header = TRUE) # Save in an object
+Turk = read.table("ta_h_Turkeve_19012023.csv", TRUE, ";") # Ordered attribs without name, and = assingnment
+
 save.image() # Save actual environment
 
 str(Turk) # Structure of object
