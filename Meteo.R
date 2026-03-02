@@ -2,3 +2,4 @@
 dir() # List of current directory
 help.start() # Help system
 read.table("ta_h_Turkeve_19012023.csv", sep = ";") # Impot csv
+?read.table # Manual page
