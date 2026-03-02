@@ -3,9 +3,11 @@ dir() # List of current directory
 help.start() # Help system
 read.table("ta_h_Turkeve_19012023.csv", sep = ";") # Impot csv
 ?read.table # Manual page
-Turk <- read.table("ta_h_Turkeve_19012023.csv", sep = ";") # Save in an object
+Turk <- read.table("ta_h_Turkeve_19012023.csv", sep = ";", header = TRUE) # Save in an object
 save.image() # Save actual environment
 
 str(Turk) # Structure of object
 head(Turk) # Header of object
 tail(Turk) # End of object
+
+Turk # Print object with their name not good if the object long
