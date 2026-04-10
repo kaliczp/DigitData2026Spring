@@ -18,6 +18,6 @@ Ido <- seq(as.Date("2002-01-01"), as.Date("2025-12-31"))
 ## Plot és mentése
 plot(Ido,raw$r, type = "h", col = "blue", ylab = "Napi csapadék [mm]", xaxs = "i", ylim = c(0,80), yaxs = "i")
 
-pdf()
+pdf(height = 10/2.54, width = 19/2.54)
 plot(Ido,raw$r, type = "h", col = "blue", ylab = "Napi csapadék [mm]", xaxs = "i", ylim = c(0,80), yaxs = "i")
 dev.off()
