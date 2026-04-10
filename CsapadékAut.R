@@ -21,3 +21,7 @@ plot(Ido,raw$r, type = "h", col = "blue", ylab = "Napi csapadék [mm]", xaxs = "
 pdf(height = 10/2.54, width = 19/2.54)
 plot(Ido,raw$r, type = "h", col = "blue", ylab = "Napi csapadék [mm]", xaxs = "i", ylim = c(0,80), yaxs = "i")
 dev.off()
+
+png(units = "cm", height = 10, width = 19, res = 300)
+plot(Ido,raw$r, type = "h", col = "blue", ylab = "Napi csapadék [mm]", xaxs = "i", ylim = c(0,80), yaxs = "i", lend = 1)
+dev.off()
