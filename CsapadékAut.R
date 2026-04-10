@@ -14,7 +14,11 @@ raw[identify(raw$r), 3]
 plot(raw$r, type = "h")
 ## Dátum másként
 Ido <- seq(as.Date("2002-01-01"), as.Date("2025-12-31"))
-
+Ido <- as.Date(as.character(raw$Time), format = "%Y%m%d")
+Ido <- as.Date(paste(substring(as.character(raw$Time),1,4),
+                     substring(as.character(raw$Time),5,6),
+                     substring(as.character(raw$Time),7,8),
+                     sep = "-"))
 ## Plot és mentése
 plot(Ido,raw$r, type = "h", col = "blue", ylab = "Napi csapadék [mm]", xaxs = "i", ylim = c(0,80), yaxs = "i")
 
