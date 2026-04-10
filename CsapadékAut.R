@@ -51,3 +51,11 @@ plot(Kunpeszér)
 
 ## Éves összeg
 plot(apply.yearly(Kunpeszér, sum))
+
+## Regresszió
+Kunpeszér.df <- data.frame(Ido = index(Kunpeszér), r = coredata(Kunpeszér))
+Kunpeszér.lm <- lm(r ~ Ido, Kunpeszér.df)
+plot(Kunpeszér.df, type = "h")
+abline(Kunpeszér.lm, col = "red", lwd = 3)
+summary(Kunpeszér.lm)
+plot(Kunpeszér.lm)
