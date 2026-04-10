@@ -9,3 +9,4 @@ raw[1:7, 3]
 plot(raw$r)
 identify(raw$r)
 raw[c(199,5774,6004), 3]
+raw[identify(raw$r), 3]
