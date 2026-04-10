@@ -10,3 +10,14 @@ plot(raw$r)
 identify(raw$r)
 raw[c(199,5774,6004), 3]
 raw[identify(raw$r), 3]
+## Jobb ábrázolás
+plot(raw$r, type = "h")
+## Dátum másként
+Ido <- seq(as.Date("2002-01-01"), as.Date("2025-12-31"))
+
+## Plot és mentése
+plot(Ido,raw$r, type = "h", col = "blue", ylab = "Napi csapadék [mm]", xaxs = "i", ylim = c(0,80), yaxs = "i")
+
+pdf()
+plot(Ido,raw$r, type = "h", col = "blue", ylab = "Napi csapadék [mm]", xaxs = "i", ylim = c(0,80), yaxs = "i")
+dev.off()
