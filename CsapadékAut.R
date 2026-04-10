@@ -5,3 +5,7 @@ raw <- read.table(rawinput, header = TRUE, sep = ";")
 raw$r
 raw[1,"r"]
 raw[1:7, 3]
+## Ábrázolás
+plot(raw$r)
+identify(raw$r)
+raw[c(199,5774,6004), 3]
